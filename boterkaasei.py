@@ -14,15 +14,14 @@ class MyAgent(MLAgent):
     
     
 random.seed(1)
-
+#0.2 0.6
  
-my_agent = MyAgent()
+my_agent = MyAgent(alpha=0.2, epsilon=0.6)
 random_agent = RandomAgent()
 
 train_and_plot(
     agent=my_agent,
     validation_agent=random_agent,
-    iterations=50,
+    iterations=60,
     trainings=100,
     validations=1000)
-
