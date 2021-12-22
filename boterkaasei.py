@@ -13,6 +13,17 @@ class MyAgent(MLAgent):
         return reward
     
     
+
+def keuze2():
+    my_agent = MyAgent()
+    my_agent = load('MyAgent_3000')
+ 
+    my_agent.learning = False
+ 
+    start(player_x=my_agent)
+
+    
+    
 random.seed(1)
 #0.2 0.6
  
@@ -31,9 +42,23 @@ train_and_plot(
 save(my_agent, 'MyAgent_3000')
 
 
-my_agent = MyAgent()
-my_agent = load('MyAgent_3000')
- 
-my_agent.learning = False
- 
-start(player_x=my_agent)
+
+
+
+while True:
+  choice = input("\n 1: tegen elkaar spelen \n 2: tegen de computer spelen \n 3: Train de computer \n 4: hoe goed is de computer \n 5: welke parameters werken het best \n Kies wat je wilt spelen: \n")
+
+  if choice == '1':
+    start()
+
+  if choice == '2':
+    keuze2()
+
+  if choice == '3':
+    keuze3()
+
+  if choice == '4':
+    keuze4()
+
+  if choice == "5":
+    keuze5()
