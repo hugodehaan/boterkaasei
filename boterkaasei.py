@@ -16,18 +16,19 @@ class MyAgent(MLAgent):
 
 def keuze2():
     my_agent = MyAgent()
+
     my_agent = load('MyAgent_3000')
  
     my_agent.learning = False
  
     start(player_x=my_agent)
-    
+
 
 def keuze3():
     naamagent = input("Wat wordt de naam van de computer? \n")
     trainingsaantal = int(input("Hoe vaak wil je je computer laten trainen? \n"))
     my_agent = MyAgent()
-    train(my_agent, 500)
+    train(my_agent, trainingsaantal)
     save(my_agent, naamagent)
     print("Je getrainde agent staat opgeslagen onder de naam: " + naamagent)
     
