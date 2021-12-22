@@ -1,5 +1,5 @@
 import random
-from bke import MLAgent, is_winner, opponent,  RandomAgent, train_and_plot, load, save, start
+from bke import MLAgent, is_winner, opponent,  RandomAgent, train_and_plot, load, save, start, train
  
  
 class MyAgent(MLAgent):
@@ -21,6 +21,16 @@ def keuze2():
     my_agent.learning = False
  
     start(player_x=my_agent)
+    
+
+def keuze3():
+    naamagent = input("Wat wordt de naam van de computer? \n")
+    my_agent = MyAgent()
+    train(my_agent, 500)
+    save(my_agent, naamagent)
+    print("Je getrainde agent staat opgeslagen onder de naam: " + naamagent)
+    
+    
 
     
     
