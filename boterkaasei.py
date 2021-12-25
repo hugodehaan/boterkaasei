@@ -61,6 +61,7 @@ def keuze5():
         iterations=aantal,
         trainings=100,
         validations=1000)
+    print("Er zijn twee hyperparameters, de epsilon en de alpha. \nDe Alpha staat voor de leerfactor. Als dit getal hoger is zal de agent zichzelf nieuwe dingen aanleren. \nDe epsilon regelt de verkenningsfactor. Hoe hoger dit getal is, hoe meer dingen de agent gaat proberen tijdens het trainen. \nBeide hyperparameters liggen altijd tussen de 0 en 1")
 
  
  
